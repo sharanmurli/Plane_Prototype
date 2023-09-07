@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PropellerSpin : MonoBehaviour
 {
-     public float propellerrotationSpeed;
-    public float verticalInput;
+     private float propellerrotationSpeed=1000;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,6 @@ public class PropellerSpin : MonoBehaviour
 
       
         // tilt the plane up/down based on up/down arrow keys
-        transform.Rotate(Vector3.right, propellerrotationSpeed * Time.deltaTime*-1);
+       transform.Rotate(Vector3.forward, propellerrotationSpeed * Time.deltaTime*-1);
     }
 }
